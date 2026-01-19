@@ -1,5 +1,5 @@
-import 'package:app_core/extensions/context_ext.dart';
 import 'package:flutter/material.dart';
+import 'package:myapp/features/splash/splash_screen.dart';
 
 class AppRoutes {
   static const splashScreen = '/';
@@ -7,18 +7,7 @@ class AppRoutes {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case splashScreen:
-        return MaterialPageRoute(
-          builder: (context) => Scaffold(
-            body: Center(
-              child: Text(
-                "splashScreen",
-                style: context.textTheme.labelSmall?.copyWith(
-                  color: context.colorScheme.primary,
-                ),
-              ),
-            ),
-          ),
-        );
+        return MaterialPageRoute(builder: (context) => SplashScreen());
 
       default:
         return MaterialPageRoute(
